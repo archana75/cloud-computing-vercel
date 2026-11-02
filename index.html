@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Website percobaan praktikum Cloud Computing dengan Vercel.">
+<title>CloudLab — Web Server on Cloud</title>
+<style>
+:root{--blue:#2563eb;--cyan:#06b6d4;--ink:#172033;--muted:#667085}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:radial-gradient(circle at 90% 8%,#06b6d425,transparent 25rem),radial-gradient(circle at 5% 90%,#2563eb20,transparent 28rem),#f4f7fb}
+.topbar{max-width:1100px;margin:auto;padding:24px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800}
+.mark{display:grid;place-items:center;width:36px;height:36px;border-radius:11px;color:white;background:linear-gradient(135deg,var(--blue),var(--cyan))}
+.tag{padding:8px 12px;border-radius:999px;background:#e7efff;color:#1d4ed8;font-size:12px;font-weight:700}
+main{width:min(100% - 40px,1000px);margin:54px auto 70px}
+.hero{text-align:center;padding:38px 12px 42px}
+.eyebrow{color:var(--blue);font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+h1{max-width:760px;margin:16px auto;font-size:clamp(38px,7vw,68px);line-height:1.04;letter-spacing:-.055em}
+h1 span{color:var(--blue)}
+.lead{max-width:650px;margin:auto;color:var(--muted);font-size:17px;line-height:1.75}
+.actions{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:28px}
+button,.secondary{border:0;border-radius:12px;padding:13px 19px;font-size:14px;font-weight:700;cursor:pointer;text-decoration:none}
+button{color:white;background:var(--blue);box-shadow:0 8px 20px #2563eb33}
+button:hover{background:#1d4ed8}
+.secondary{color:#344054;background:white;border:1px solid #e4e7ec}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{padding:23px;border:1px solid #e7ebf2;border-radius:18px;background:#ffffffed;box-shadow:0 12px 35px #1018280b}
+.icon{display:grid;place-items:center;width:42px;height:42px;margin-bottom:17px;border-radius:13px;background:#edf4ff;font-size:20px}
+.card h2{margin:0 0 8px;font-size:17px}
+.card p{margin:0;color:var(--muted);font-size:14px;line-height:1.65}
+.status{display:flex;justify-content:center;align-items:center;gap:9px;margin:30px auto 0;color:#15803d;font-size:13px;font-weight:700}
+.pulse{width:8px;height:8px;border-radius:50%;background:#22c55e}
+footer{padding:25px;color:#98a2b3;text-align:center;font-size:12px}
+@media(max-width:700px){.grid{grid-template-columns:1fr}.topbar{padding:18px}main{margin-top:25px}.hero{padding-top:25px}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="mark">C</span> CloudLab</div>
+  <span class="tag">PRAKTIKUM CLOUD COMPUTING</span>
+</header>
+<main>
+  <section class="hero">
+    <div class="eyebrow">Web Server on Cloud</div>
+    <h1>Website sederhana,<br><span>berjalan di cloud.</span></h1>
+    <p class="lead">Ini adalah website percobaan untuk mempraktikkan proses deployment aplikasi web statis menggunakan Vercel dan repository GitHub.</p>
+    <div class="actions">
+      <button type="button" onclick="showDeploymentInfo()">Tes interaksi</button>
+      <a class="secondary" href="#fitur">Lihat fitur</a>
+    </div>
+    <div class="status"><span class="pulse"></span> Halaman berhasil dimuat di browser</div>
+  </section>
+  <section class="grid" id="fitur">
+    <article class="card"><div class="icon">☁️</div><h2>Cloud Hosting</h2><p>Website ditempatkan pada infrastruktur cloud agar dapat diakses melalui internet.</p></article>
+    <article class="card"><div class="icon">🔗</div><h2>GitHub Integration</h2><p>Source code disimpan dalam repository GitHub sebagai sumber deployment.</p></article>
+    <article class="card"><div class="icon">⚡</div><h2>Continuous Deployment</h2><p>Perubahan pada branch yang terhubung dapat memicu deployment baru secara otomatis.</p></article>
+  </section>
+</main>
+<footer>CloudLab · Praktikum Cloud Computing · HTML, CSS, JavaScript</footer>
+<script>
+function showDeploymentInfo(){alert("Interaksi berhasil! Website CloudLab berjalan menggunakan HTML, CSS, dan JavaScript.");}
+</script>
+</body>
+</html>
